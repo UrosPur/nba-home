@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//team routes
+
+Route::get('/', 'TeamsController@index')->name('teams.index');
+Route::get('/teams/{id}', 'TeamsController@show')->name('teams.show');
+
+
+
+//players routes
+Route::get('/players/{id}', 'PlayersController@show')->name('players.show');
